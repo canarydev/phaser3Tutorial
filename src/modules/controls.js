@@ -19,6 +19,7 @@ export function move(keymap, player) {
     }
 }
 
+/* Cambiar color al pulsar */
 export function colorRed(keymap, player) {
     if (keymap.space.isDown) {
         player.setTint(0xff0000);

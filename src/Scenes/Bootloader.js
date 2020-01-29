@@ -1,6 +1,5 @@
-import { keymap } from './modules/keys.js'
-import { move, colorRed, mouse, greenClick, blueOver, blockMouse, releaseMouse, moveBlockMouse, drag } from './modules/controls.js'
-import { setTint } from './modules/utilities.js'
+import { keymap } from '../modules/keys.js'
+import { move, colorRed, mouse, greenClick, blueOver, blockMouse, releaseMouse, moveBlockMouse, drag } from '../modules/controls.js'
 
 class Bootloader extends Phaser.Scene {
     constructor() {
