@@ -10,11 +10,24 @@ class Bootloader extends Phaser.Scene {
     }
     preload() {
         this.load.path = './assets/';
-        this.load.image(['cubix', 'cubix_fondo']);
-    }
-    create() {
-        this.cubix = this.add.image(100, 100, 'cubix');
 
+        this.load.spritesheet('tomato', 'tomato.png', {
+            frameWidth: 16,
+            frameHeight: 25
+        });
+
+        /* Cómo cargar un sprite que tiene espacios entre sprites */
+        this.load.spritesheet('tomato_spacing', 'tomato_spacing.png', {
+            frameWidth: 16,
+            frameHeight: 25,
+            margin: 1,
+            spacing: 2
+        });
+    }
+    
+    create() {
+        this.tomato = this.add.sprite(100, 100, 'tomato', 0);
+        this.tomato_spacing = this.add.sprite(100, 130, 'tomato_spacing', 0);
     }
     update(time, delta) {
        
