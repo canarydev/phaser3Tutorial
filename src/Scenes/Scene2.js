@@ -19,7 +19,20 @@ class Bootloader extends Phaser.Scene {
 
     create() {
         this.tomato = this.add.sprite(100, 100, 'tomato', 0);
-        
+        this.anims.create({
+            key: "tomato_walk",
+            frames: this.anims.generateFrameNumbers('tomato', {
+                start: 0,
+                end: 7
+                //También se pueden elegir los frames así:
+                //frames: [0, 1, 2, 3, 4, 5, 6, 7]
+            }),
+            repeat: -1, //repetición infinita
+            frameRate: 15 //frames por segundo
+        });
+        this.tomato.anims.play("tomato_walk");
+        //También se puede animar usando esta expresión:
+        //this.anims.play("tomato_walk", this.tomato);
     }
     update(time, delta) {
        
