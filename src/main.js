@@ -1,4 +1,5 @@
-import Bootloader from './Scenes/Bootloader.js';
+//import Bootloader from './Scenes/Bootloader.js';
+import Bootloader from './Scenes/Scene2.js';
 
 const config = {
     title: "prueba",
