@@ -1,6 +1,3 @@
-import { keymap } from '../modules/keys.js'
-import { } from '../modules/controls.js'
-
 class Bootloader extends Phaser.Scene {
     constructor() {
         super('Bootloader');
