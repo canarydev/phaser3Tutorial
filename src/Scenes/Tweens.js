@@ -7,7 +7,7 @@ class Bootloader extends Phaser.Scene {
     }
     preload() {
         this.load.path = './assets/';
-        this.load.image(['cubix', 'cubix_fondo']);
+        this.load.image(['cubix']);
     }
 
     create() {
@@ -16,6 +16,10 @@ class Bootloader extends Phaser.Scene {
             targets: [this.cubix],
             ease: 'Bounce',
             y: 200,
+            x: {
+                value: 200,
+                ease: 'Elastic'
+            },
             repeat: 1,
             yoyo: false,
             //delay: 1000,
