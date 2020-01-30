@@ -4,7 +4,6 @@ import { } from './utilities.js'
 export function move(keymap, player) {
     if (keymap.up.isDown) {
         player.y -= 1;
-        console.log('arriba');
     }
     if (keymap.down.isDown) {
         player.y += 1;
@@ -23,47 +22,47 @@ export function move(keymap, player) {
 export function colorRed(keymap, player) {
     if (keymap.space.isDown) {
         player.setTint(0xff0000);
-        console.log("Se ha aplicado un tinte.");
+        //console.log("Se ha aplicado un tinte.");
     }
     else player.clearTint();;
 }
 
 
 const EVENT = Phaser.Input.Events;
-console.log("EVENT ", EVENT);
+//console.log("EVENT ", EVENT);
 
 export function mouse(input, object) {
-    
+
     input.on(EVENT.POINTER_DOWN, (event) => {
-        console.log("Se ha clickado.");
+        //console.log("Se ha clickado.");
     });
-    
+
     input.on(EVENT.POINTER_UP, (event) => {
-        console.log("Se ha dejado de clickar.");
+        //console.log("Se ha dejado de clickar.");
     });
 
-     input.on(EVENT.POINTER_MOVE, (event) => {
-         if (event.isDown) {
-             object.x = event.worldX;
-             object.y = event.worldY;
-         }
-     });
+    input.on(EVENT.POINTER_MOVE, (event) => {
+        if (event.isDown) {
+            object.x = event.worldX;
+            object.y = event.worldY;
+        }
+    });
 
-     input.on(EVENT.GAME_OVER, (event) => {
-         console.log("Has entrado en el lienzo.");
-     });
+    input.on(EVENT.GAME_OVER, (event) => {
+        //console.log("Has entrado en el lienzo.");
+    });
 
-     input.on(EVENT.GAME_OUT, (event) => {
-         console.log("Has salido del lienzo.");
-     });
+    input.on(EVENT.GAME_OUT, (event) => {
+        //console.log("Has salido del lienzo.");
+    });
 
-     input.on(EVENT.POINTER_DOWN_OUTSIDE, (event) => {
-         console.log("Has clickado fuera del lienzo.");
-     });
+    input.on(EVENT.POINTER_DOWN_OUTSIDE, (event) => {
+        //console.log("Has clickado fuera del lienzo.");
+    });
 
-     input.on(EVENT.POINTER_UP_OUTSIDE, (event) => {
-         console.log("Has dejado de clickar fuera del lienzo.");
-     });
+    input.on(EVENT.POINTER_UP_OUTSIDE, (event) => {
+        //console.log("Has dejado de clickar fuera del lienzo.");
+    });
 
 }
 export function greenClick(input) {
@@ -75,22 +74,22 @@ export function greenClick(input) {
         gameObject.clearTint();
         //console.log("Has hecho click a un GO")
     });
-    
+
 }
 export function blueOver(input) {
-    input.on(EVENT.GAMEOBJECT_OVER, (pointer, gameObject) =>{
+    input.on(EVENT.GAMEOBJECT_OVER, (pointer, gameObject) => {
         gameObject.setTint(0x0000ff);
     });
-    input.on(EVENT.GAMEOBJECT_OUT, (pointer, gameObject) =>{
+    input.on(EVENT.GAMEOBJECT_OUT, (pointer, gameObject) => {
         gameObject.clearTint();
     });
-    
+
 }
 export function blockMouse(input) {
     input.on(EVENT.POINTER_DOWN, () => {
         input.mouse.requestPointerLock(); //Bloquea el ratón
     });
-    
+
 }
 
 export function releaseMouse(input, keymap) {
@@ -102,17 +101,17 @@ export function releaseMouse(input, keymap) {
 export function moveBlockMouse(input, object) {
     input.on(EVENT.POINTER_MOVE, (pointer) => {
         if (input.mouse.locked) {
-            try{
+            try {
                 object.x += pointer.movementX;
                 object.y += pointer.movementY;
             }
-            catch(TypeError){}
+            catch (TypeError) { }
         }
     });
 }
 
 export function drag(input, drop) {
-    drop.input.dropZone = true; 
+    drop.input.dropZone = true;
     input.on(EVENT.DRAG_START, (pointer, obj, dragX, dragY) => {
         obj.setScale(.75);
     });
@@ -121,11 +120,11 @@ export function drag(input, drop) {
         obj.y = dragY;
     });
     input.on(EVENT.DRAG_END, (pointer, obj, dropzone) => {
-        if (!dropzone){
+        if (!dropzone) {
             obj.x = obj.input.dragStartX;
             obj.y = obj.input.dragStartY;
         }
-        else{
+        else {
             //obj.x = drop.x;
             //obj.y = drop.y;
         }
