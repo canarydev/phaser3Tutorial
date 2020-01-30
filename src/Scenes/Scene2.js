@@ -10,32 +10,21 @@ class Bootloader extends Phaser.Scene {
     }
     preload() {
         this.load.path = './assets/';
+        
+        //utilizaremos esta herramienta para crear los atlas
+        //https://gammafp.github.io/atlas-packer-phaser/
 
-        this.load.spritesheet('tomato', 'tomato.png', {
-            frameWidth: 16,
-            frameHeight: 25
-        });
+        this.load.atlas('tomato', 'tomato.png', 'atlas/tomato_atlas.json')
+        this.load.animation('tomatoAnim', 'atlas/tomato_anim.json');
     }
 
     create() {
-        this.tomato = this.add.sprite(100, 100, 'tomato', 0);
-        this.anims.create({
-            key: "tomato_walk",
-            frames: this.anims.generateFrameNumbers('tomato', {
-                start: 0,
-                end: 7
-                //También se pueden elegir los frames así:
-                //frames: [0, 1, 2, 3, 4, 5, 6, 7]
-            }),
-            repeat: -1, //repetición infinita
-            frameRate: 15 //frames por segundo
-        });
-        this.tomato.anims.play("tomato_walk");
-        //También se puede animar usando esta expresión:
-        //this.anims.play("tomato_walk", this.tomato);
+        this.tomato = this.add.sprite(100, 100, 'tomato').setScale(3);
+        this.tomato.anims.play('tomato_walk');
     }
+
     update(time, delta) {
-       
+
     }
 }
 
