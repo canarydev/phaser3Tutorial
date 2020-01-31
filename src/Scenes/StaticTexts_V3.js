@@ -4,7 +4,7 @@
 Versión 3:
     Usando this.make.text(diccionario)
 
-En este caso se crea un array de diccionarios en ../modules/text.js
+En este caso se crea un array de diccionarios en ../modules/text.js y esto permite que sea mucho más personalizable y poder crear estilos únicos para diferentes personajes.
 
 
 Ayuda: https://phaser.io/docs/2.6.2/Phaser.Text.html
