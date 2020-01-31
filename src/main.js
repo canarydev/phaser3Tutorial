@@ -1,7 +1,8 @@
 //import Bootloader from './Scenes/Bootloader.js';
 //import Bootloader from './Scenes/AnimationsWithAtlas.js';
 //import Bootloader from './Scenes/Tweens.js';
-import Bootloader from './Scenes/Timelines.js';
+//import Bootloader from './Scenes/Timelines.js';
+import Bootloader from './Scenes/StaticText.js';
 
 const config = {
     title: "prueba",
