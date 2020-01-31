@@ -1,6 +1,7 @@
 /* G A M E O B J E C T S  y primeros pasos */
 /*
 
+Para ver qué parámetros se pueden modificar haremos un console.log(gameObject); iremos a prototype y veremos los parámetros que se pueden modificar.
 
 Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.Types.GameObjects.html
 */
