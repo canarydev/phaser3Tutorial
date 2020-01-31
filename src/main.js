@@ -1,5 +1,5 @@
 //import Bootloader from './Scenes/Bootloader.js';
-//import Bootloader from './Scenes/Animations.js';
+//import Bootloader from './Scenes/AnimationsWithAtlas.js';
 //import Bootloader from './Scenes/Tweens.js';
 import Bootloader from './Scenes/Timelines.js';
 
