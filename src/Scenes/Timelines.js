@@ -1,6 +1,8 @@
 /* T I M E L I N E S */
 /*
 Un Timeline es una línea de tiempo en la que se pueden ejecutar múltiples Tweens.
+
+Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.Types.Tweens.html
 */
 
 class Bootloader extends Phaser.Scene {
