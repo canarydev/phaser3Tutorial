@@ -6,7 +6,7 @@ class Bootloader extends Phaser.Scene {
         super('Bootloader');
     }
     init() {
-        console.log('init Scene Bootloader')
+        console.log('Scene Bootloader')
     }
     preload() {
         console.log('Bootloader');
