@@ -1,3 +1,10 @@
+/* I N T E R P O L A C I O N E S */
+/* 
+Se usan para mover un objeto del punto A al punto B.
+
+Ayuda aquí: https://photonstorm.github.io/phaser3-docs/Phaser.Types.Tweens.html
+*/
+
 class Bootloader extends Phaser.Scene {
     constructor() {
         super('Bootloader');

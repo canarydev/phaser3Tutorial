@@ -16,8 +16,61 @@ class Bootloader extends Phaser.Scene {
     }
 
     create() {
-        this.cubix = this.add.image(100, 100, 'cubix');
+        this.cubix = this.add.image(50, 50, 'cubix');
+        /*
+        //Una primera forma de crear un Timeline
         this.timeline = this.tweens.createTimeline();
+
+        this.timeline.add({
+            targets: [this.cubix],
+            x: 200
+
+        });
+        this.timeline.add({
+            targets: [this.cubix],
+            y: 200
+
+        });
+        this.timeline.add({
+            targets: [this.cubix],
+            x: 50
+
+        });
+        this.timeline.add({
+            targets: [this.cubix],
+            y: 50
+
+        });
+
+        this.timeline.play();
+        */
+        this.timeline = this.tweens.timeline({
+            targets: [this.cubix],
+            paused: true,
+            
+            tweens: [
+                {
+                    targets: [this.cubix],
+                    x: 200
+        
+                },
+                {
+                    targets: [this.cubix],
+                    y: 200
+        
+                },
+                {
+                    targets: [this.cubix],
+                    x: 50
+        
+                },
+                {
+                    targets: [this.cubix],
+                    y: 50
+        
+                }
+            ]
+        });
     }
 
     update(time, delta) {
