@@ -46,33 +46,37 @@ class Bootloader extends Phaser.Scene {
 
         this.timeline.play();
         */
+
+        /* Una segunda forma de crear un Timeline */
+        
         this.timeline = this.tweens.timeline({
             targets: [this.cubix],
-            paused: true,
-            
+            //duration: 1000, //Duración de cada tween
+            //totalDuration: 1000, //Duración total de todos los tweens juntos
+            loop: -1,
+            paused: true, // si lo pauso  ↴
             tweens: [
                 {
                     targets: [this.cubix],
                     x: 200
-        
                 },
                 {
                     targets: [this.cubix],
-                    y: 200
-        
+                    y: 200,
+                    offset: 500 //adelanta la duración para que se realice a los 500ms
+                    //offset: "-=200"
                 },
                 {
                     targets: [this.cubix],
                     x: 50
-        
                 },
                 {
                     targets: [this.cubix],
                     y: 50
-        
                 }
             ]
         });
+        this.timeline.play(); // hay que darle al play ↲
     }
 
     update(time, delta) {
