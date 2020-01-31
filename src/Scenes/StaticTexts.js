@@ -1,8 +1,13 @@
 /* T E X T O S  E S T Á T I C O S */
 /*
 
-Ayuda: 
+
+
+Ayuda: https://phaser.io/docs/2.6.2/Phaser.Text.html
 */
+
+import { crearTexto } from '../modules/text.js'
+
 
 class Bootloader extends Phaser.Scene {
     constructor() {
@@ -15,27 +20,9 @@ class Bootloader extends Phaser.Scene {
     }
 
     create() {
-        //Una forma más elegante de hacer textos
-        var texto = {
-            x: 10,
-            y: 100,
-            text: "Hola mundo.\n¿Qué tal?",
-            style: {
-                color: "#000000",
-                fontSize: 30,
-                backgroundColor: '#ffffff',
-                fontStyle: 'Bold Italic',
-                padding: {
-                    top: 15,
-                    bottom: 40,
-                    right: 10,
-                    left: 10,
-                },
-                align: 'center'
-            }
-        };
-        
-        this.make.text(texto);
+        //La forma más elegante de hacer textos
+        this.texto = this.make.text(crearTexto('Hola Mundo!', 0));
+
     }
 
     update(time, delta) {
