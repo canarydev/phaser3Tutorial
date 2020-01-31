@@ -19,6 +19,7 @@ function creaDict(texto, estilo) {
             y: 100,
             text: texto,
             style: {
+                fontFamily: 'IndieFlower',
                 color: "#000000",
                 fontSize: 30,
                 backgroundColor: '#ffffff',

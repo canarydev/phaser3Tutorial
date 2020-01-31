@@ -1,6 +1,10 @@
 /* T E X T O S  E S T Á T I C O S */
 /*
 
+Versión 3:
+    Usando this.make.text(diccionario)
+
+En este caso se crea un array de diccionarios en ../modules/text.js
 
 
 Ayuda: https://phaser.io/docs/2.6.2/Phaser.Text.html
@@ -21,7 +25,7 @@ class Bootloader extends Phaser.Scene {
 
     create() {
         //La forma más elegante de hacer textos
-        this.texto = this.make.text(crearTexto('Hola Mundo!', 0));
+        this.texto = this.make.text(crearTexto('Hola Mundo!', 1));
 
     }
 
