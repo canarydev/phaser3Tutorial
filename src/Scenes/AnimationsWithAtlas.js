@@ -1,3 +1,11 @@
+/* A N I M A C I O N E S  con  A T L A S*/
+/*
+Coge un conjunto de sprites y crea una animación. Hay dos formas de crearlos, con atlas y sin ellos.
+
+Este ejemplo es utilizando atlas. Para crear los atlas utilizaremos esta herramienta:
+https://gammafp.github.io/atlas-packer-phaser/
+*/
+
 class Bootloader extends Phaser.Scene {
     constructor() {
         super('Bootloader');
@@ -7,9 +15,6 @@ class Bootloader extends Phaser.Scene {
     }
     preload() {
         this.load.path = './assets/';
-        
-        //utilizaremos esta herramienta para crear los atlas
-        //https://gammafp.github.io/atlas-packer-phaser/
 
         this.load.atlas('tomato', 'tomato.png', 'atlas/tomato_atlas.json')
         this.load.animation('tomatoAnim', 'atlas/tomato_anim.json');
