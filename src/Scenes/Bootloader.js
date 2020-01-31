@@ -1,3 +1,10 @@
+/* G A M E O B J E C T S  y primeros pasos */
+/*
+
+
+Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.Types.GameObjects.html
+*/
+
 import { keymap } from '../modules/keys.js'
 import { move, colorRed, mouse, greenClick, blueOver, blockMouse, releaseMouse, moveBlockMouse, drag } from '../modules/controls.js'
 

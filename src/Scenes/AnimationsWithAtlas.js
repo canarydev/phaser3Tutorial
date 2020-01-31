@@ -4,6 +4,8 @@ Coge un conjunto de sprites y crea una animación. Hay dos formas de crearlos, c
 
 Este ejemplo es utilizando atlas. Para crear los atlas utilizaremos esta herramienta:
 https://gammafp.github.io/atlas-packer-phaser/
+
+Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.Types.Animations.html
 */
 
 class Bootloader extends Phaser.Scene {
