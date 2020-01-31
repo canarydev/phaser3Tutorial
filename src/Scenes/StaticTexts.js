@@ -15,6 +15,7 @@ class Bootloader extends Phaser.Scene {
     }
 
     create() {
+        //Forma primitiva de hacer los text
         var texto = this.add.text(10, 100, "Hola mundo.\n¿Qué tal?", {
             color: "#000000",
             fontSize: 30,
