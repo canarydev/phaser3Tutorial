@@ -11,16 +11,17 @@ class Bootloader extends Phaser.Scene {
     }
 
     create() {
-        this.cubix = this.add.image(100,100, 'cubix').setScale(.5);
+        this.cubix = this.add.image(50,50, 'cubix').setScale(.5);
         this.tweens = this.add.tween({
             targets: [this.cubix],
             ease: 'Bounce',
             y: 200,
             x: {
                 value: 200,
-                ease: 'Elastic'
+                ease: 'Elastic',
+                duration: 9000
             },
-            repeat: 1,
+            repeat: 0,
             yoyo: false,
             //delay: 1000,
             //hold: 1000,
@@ -34,9 +35,17 @@ class Bootloader extends Phaser.Scene {
             onYoyo: () => {
                 console.log("Yoyolooooo.")
             },
+            /*
             onComplete: () => {
                 console.log("Completado.")
-            }
+                this.cubix.setTint(0xFF0000);
+            },
+            */
+            onComplete: (tween, obj, target) => {
+                target.setTint(0xFF0000);
+                console.log("Completado.")
+            },
+            onCompleteParams: [this.cubix]
         })
     }
 
