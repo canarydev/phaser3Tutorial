@@ -1,10 +1,12 @@
+import Bootloader from './Scenes/Basics01.js';
+//import Bootloader from './Scenes/Basics02.js';
 //import Bootloader from './Scenes/Bootloader.js';
 //import Bootloader from './Scenes/AnimationsWithAtlas.js';
 //import Bootloader from './Scenes/Tweens.js';
 //import Bootloader from './Scenes/Timelines.js';
 //import Bootloader from './Scenes/StaticTexts_V1.js';
 //import Bootloader from './Scenes/StaticTexts_V2.js';
-import Bootloader from './Scenes/StaticTexts_V3.js';
+//import Bootloader from './Scenes/StaticTexts_V3.js';
 
 const config = {
     title: "prueba",
