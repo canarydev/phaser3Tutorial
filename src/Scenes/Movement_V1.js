@@ -26,7 +26,6 @@ class Bootloader extends Phaser.Scene {
 
     create() {
         this.keys = this.input.keyboard.addKeys(Phaser.Input.Keyboard.KeyCodes);
-
         this.cubix = this.add.image(50, 100, 'cubix');
     }
     

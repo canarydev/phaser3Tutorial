@@ -1,6 +1,6 @@
 import { } from './utilities.js'
-/* Movimiento */
 
+/* Movimiento */
 export function move(keymap, player) {
     if (keymap.up.isDown) {
         player.y -= 1;
@@ -22,23 +22,22 @@ export function move(keymap, player) {
 export function colorRed(keymap, player) {
     if (keymap.space.isDown) {
         player.setTint(0xff0000);
-        //console.log("Se ha aplicado un tinte.");
     }
     else player.clearTint();;
 }
 
 
 const EVENT = Phaser.Input.Events;
-//console.log("EVENT ", EVENT);
+console.log("EVENT ", EVENT);
 
 export function mouse(input, object) {
 
     input.on(EVENT.POINTER_DOWN, (event) => {
-        //console.log("Se ha clickado.");
+        console.log("Se ha clickado.");
     });
 
     input.on(EVENT.POINTER_UP, (event) => {
-        //console.log("Se ha dejado de clickar.");
+        console.log("Se ha dejado de clickar.");
     });
 
     input.on(EVENT.POINTER_MOVE, (event) => {
@@ -49,19 +48,19 @@ export function mouse(input, object) {
     });
 
     input.on(EVENT.GAME_OVER, (event) => {
-        //console.log("Has entrado en el lienzo.");
+        console.log("Has entrado en el lienzo.");
     });
 
     input.on(EVENT.GAME_OUT, (event) => {
-        //console.log("Has salido del lienzo.");
+        console.log("Has salido del lienzo.");
     });
 
     input.on(EVENT.POINTER_DOWN_OUTSIDE, (event) => {
-        //console.log("Has clickado fuera del lienzo.");
+        console.log("Has clickado fuera del lienzo.");
     });
 
     input.on(EVENT.POINTER_UP_OUTSIDE, (event) => {
-        //console.log("Has dejado de clickar fuera del lienzo.");
+        console.log("Has dejado de clickar fuera del lienzo.");
     });
 
 }
