@@ -18,10 +18,6 @@ class Bootloader extends Phaser.Scene {
     preload() {
         this.load.setPath('./assets/');
         this.load.image('cubix');
-
-        this.load.on('complete', () => {
-            console.log('Load complete');
-        });
     }
 
     create() {

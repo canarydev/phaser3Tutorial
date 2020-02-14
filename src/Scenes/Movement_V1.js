@@ -12,10 +12,9 @@ class Bootloader extends Phaser.Scene {
         super('Bootloader');
     }
     init() {
-        console.log('Scene Bootloader')
+        console.log('Scene Movement_V1')
     }
     preload() {
-        console.log('Bootloader');
         this.load.setPath('./assets/');
         this.load.image('cubix');
 

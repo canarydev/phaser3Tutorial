@@ -1,11 +1,13 @@
 /* Diferentes formas de cambiar el color a una imagen */
 /*
 
-He creado tres funciones sencillas que nos permiten cambiar el color a los elementos que tenemos en pantalla.
+He creado cinco funciones sencillas que nos permiten cambiar el color, hacer invisibles o modificar el parámetro aplha a los elementos que tenemos en pantalla.
 
 colorRed -> Pulsando espacio.
 greenClick -> Haciendo click.
 blueOver -> Pasando el ratón por encima.
+setAlpha -> Pulsando A.
+setInvisible -> Pulsando I.
 
 Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Image.html
 */
@@ -18,16 +20,11 @@ class Bootloader extends Phaser.Scene {
         super('Bootloader');
     }
     init() {
-        console.log('Scene Bootloader')
+        console.log('Scene Colors')
     }
     preload() {
-        console.log('Bootloader');
         this.load.setPath('./assets/');
         this.load.image(['logo_gamma', 'cubix', 'cubix_fondo', 'drop']);
-
-        this.load.on('complete', () => {
-            console.log('Load complete');
-        });
     }
 
     create() {

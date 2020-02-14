@@ -7,7 +7,8 @@ Versión 2:
     Usando this.make.text(diccionario);
 
 
-Ayuda: https://phaser.io/docs/2.6.2/Phaser.Text.html
+Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Text.html
+https://photonstorm.github.io/phaser3-docs/Phaser.Types.GameObjects.Text.html#.TextStyle
 */
 
 import { crearTexto } from '../modules/text.js'
@@ -18,13 +19,12 @@ class Bootloader extends Phaser.Scene {
         super('Bootloader');
     }
     init() {
-        console.log('Scene StaticTexts');
+        console.log('Scene StaticTexts_V2');
     }
     preload() {
     }
 
     create() {
-        //Segunda forma de hacer textos
         var texto = {
             x: 10,
             y: 100,

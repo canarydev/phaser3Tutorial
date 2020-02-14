@@ -7,7 +7,8 @@ Versión 3:
 En este caso se crea un array de diccionarios en ../modules/text.js y esto permite que sea mucho más personalizable y poder crear estilos únicos para diferentes personajes.
 
 
-Ayuda: https://phaser.io/docs/2.6.2/Phaser.Text.html
+Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Text.html
+https://photonstorm.github.io/phaser3-docs/Phaser.Types.GameObjects.Text.html#.TextStyle
 */
 
 import { crearTexto } from '../modules/text.js'
@@ -18,15 +19,13 @@ class Bootloader extends Phaser.Scene {
         super('Bootloader');
     }
     init() {
-        console.log('Scene StaticTexts');
+        console.log('Scene StaticTexts_V3');
     }
     preload() {
     }
 
     create() {
-        //La forma más elegante de hacer textos
         this.texto = this.make.text(crearTexto('Hola Mundo!', 1));
-
     }
 
     update(time, delta) {

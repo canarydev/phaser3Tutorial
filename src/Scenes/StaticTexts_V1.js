@@ -15,13 +15,12 @@ class Bootloader extends Phaser.Scene {
         super('Bootloader');
     }
     init() {
-        console.log('Scene StaticTexts');
+        console.log('Scene StaticTexts_V1');
     }
     preload() {
     }
 
     create() {
-        //Forma primitiva de hacer los text	
         var texto = this.add.text(10, 100, "Hola mundo.\n¿Qué tal?", {
             color: "#000000",
             fontSize: 30,
