@@ -77,7 +77,7 @@ class Bootloader extends Phaser.Scene {
     }
     
     update() {
-        const EVENT = Phaser.Input.Events;
+        //const EVENT = Phaser.Input.Events;
         //move(this.keys, this.cubix);
         //color(this.keys, this.cubix);
         //mouse(this.input, this.cubix_fondo);

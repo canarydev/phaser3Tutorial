@@ -10,6 +10,7 @@ export const keymap = {
     left: KEYCODES.LEFT,
     right: KEYCODES.RIGHT,
     space: KEYCODES.SPACE,
-    a: KEYCODES.A
+    a: KEYCODES.A,
+    i: KEYCODES.I
 };
 

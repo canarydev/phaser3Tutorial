@@ -18,12 +18,30 @@ export function move(keymap, player) {
     }
 }
 
-/* Cambiar color al pulsar */
+/* Cambiar color al pulsar espacio */
 export function colorRed(keymap, player) {
     if (keymap.space.isDown) {
         player.setTint(0xff0000);
     }
     else player.clearTint();;
+}
+
+/* Cambiar alpha al pulsar A */
+//Alpha va de 0 a 1
+export function setAlpha(keymap, player) {
+    if (keymap.a.isDown) {
+        player.setAlpha(0.3);
+    }
+    else player.setAlpha(1);
+}
+
+/* Vuelve invisible al pulsar i */
+//Visible puede ser 0 (invisible) o 1 (visible)
+export function setInvisible(keymap, player) {
+    if (keymap.i.isDown) {
+        player.setVisible(0);
+    }
+    else player.setVisible(1);
 }
 
 
@@ -67,14 +85,14 @@ export function mouse(input, object) {
 export function greenClick(input) {
     input.on(EVENT.GAMEOBJECT_DOWN, (pointer, gameObject) => {
         gameObject.setTint(0x00ff00);
-        //console.log("Has hecho click a un GO")
+        //console.log("Has hecho click a un GameObject")
     });
     input.on(EVENT.GAMEOBJECT_UP, (pointer, gameObject) => {
         gameObject.clearTint();
-        //console.log("Has hecho click a un GO")
+        //console.log("Has hecho click a un GameObject")
     });
-
 }
+
 export function blueOver(input) {
     input.on(EVENT.GAMEOBJECT_OVER, (pointer, gameObject) => {
         gameObject.setTint(0x0000ff);
@@ -84,11 +102,11 @@ export function blueOver(input) {
     });
 
 }
+
 export function blockMouse(input) {
     input.on(EVENT.POINTER_DOWN, () => {
         input.mouse.requestPointerLock(); //Bloquea el ratón
     });
-
 }
 
 export function releaseMouse(input, keymap) {
