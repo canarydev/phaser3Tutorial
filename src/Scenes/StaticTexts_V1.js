@@ -35,6 +35,7 @@ class Bootloader extends Phaser.Scene {
             },
             align: 'center'
         });
+        
         //texto ahora es un gameObject y puede ser tratado como tal:
         /*
         texto.setText('Soy un nuevo texto.')
