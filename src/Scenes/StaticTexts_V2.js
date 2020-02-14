@@ -44,9 +44,10 @@ class Bootloader extends Phaser.Scene {
             }
         };
         this.make.text(texto);
-        update(time, delta) {
-
-        }
     }
+    update(time, delta) {
 
-    export default Bootloader;
+    }
+}
+
+export default Bootloader;
