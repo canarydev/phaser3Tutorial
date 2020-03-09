@@ -1,4 +1,4 @@
-/* M O U S E (o pointer) */
+/* P O I N T E R (ratón) */
 /*
 
 Además de las funciones que ya se han visto que se pueden realizar con el ratón (Colors.js), existen otras funciones que nos pueden resultar útiles.
