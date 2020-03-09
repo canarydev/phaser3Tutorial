@@ -46,7 +46,7 @@ export function setInvisible(keymap, player) {
 
 
 const EVENT = Phaser.Input.Events;
-console.log("EVENT ", EVENT);
+//console.log("EVENT ", EVENT);
 
 export function mouse(input, object) {
 
@@ -85,11 +85,9 @@ export function mouse(input, object) {
 export function greenClick(input) {
     input.on(EVENT.GAMEOBJECT_DOWN, (pointer, gameObject) => {
         gameObject.setTint(0x00ff00);
-        //console.log("Has hecho click a un GameObject")
     });
     input.on(EVENT.GAMEOBJECT_UP, (pointer, gameObject) => {
         gameObject.clearTint();
-        //console.log("Has hecho click a un GameObject")
     });
 }
 
