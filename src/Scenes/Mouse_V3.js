@@ -1,4 +1,4 @@
-/* M O U S E */
+/* M O U S E (o pointer) */
 /*
 
 Drag and Drop. Agarra un gameObject draggable y lo mantiene en la zona de dropeo.
@@ -7,7 +7,7 @@ Ayuda:  https://photonstorm.github.io/phaser3-docs/Phaser.Input.Events.html#even
 */
 
 import { keymap } from '../modules/keys.js'
-import { mouse, greenClick, blueOver, blockMouse, releaseMouse, moveBlockMouse, drag } from '../modules/controls.js'
+import { pointer, greenClick, blueOver, requestPointer, releasePointer, moveBlockPointer, drag } from '../modules/controls.js'
 
 class Bootloader extends Phaser.Scene {
     constructor() {
@@ -30,7 +30,7 @@ class Bootloader extends Phaser.Scene {
 
         this.keys = this.input.keyboard.addKeys(keymap);
 
-        moveBlockMouse(this.input, this.cubix_fondo);
+        moveBlockPointer(this.input, this.cubix_fondo);
     }
     
     update() {

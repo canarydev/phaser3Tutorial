@@ -7,7 +7,7 @@ Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.Types.GameObjects.html
 */
 
 import { keymap } from '../modules/keys.js'
-import { move, colorRed, mouse, greenClick, blueOver, blockMouse, releaseMouse, moveBlockMouse, drag } from '../modules/controls.js'
+import { move, colorRed, pointer, greenClick, blueOver, requestPointer, releasePointer, moveBlockPointer, drag } from '../modules/controls.js'
 
 class Bootloader extends Phaser.Scene {
     constructor() {
@@ -72,7 +72,7 @@ class Bootloader extends Phaser.Scene {
 
         //this.cursor = this.input.keyboard.createCursorKeys(); //Crear unos controles básicos predefinidos.
 
-        moveBlockMouse(this.input, this.cubix_fondo);
+        moveBlockPointer(this.input, this.cubix_fondo);
 
     }
     

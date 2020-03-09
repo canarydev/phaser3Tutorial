@@ -1,9 +1,9 @@
-/* M O U S E */
+/* M O U S E (o pointer) */
 /*
 
 Además de las funciones que ya se han visto que se pueden realizar con el ratón (Colors.js), existen otras funciones que nos pueden resultar útiles.
 
-La función "mouse(input, object)" muestra el manejo básico de un ratón.
+La función "pointer(input, object)" muestra el manejo básico de un ratón.
 
 Es importante notar que para el manejo de los ratones es casi único y exclusivo el uso de eventos.
 
@@ -12,7 +12,7 @@ Todos los eventos vendrán dados por Phaser.Input.Events.
 Ayuda: https://photonstorm.github.io/phaser3-docs/Phaser.Input.Events.html#event:POINTER_DOWN <-- Los demás eventos están justo debajo (^.^)
 
 */
-import { mouse} from '../modules/controls.js'
+import { pointer} from '../modules/controls.js'
 
 class Bootloader extends Phaser.Scene {
     constructor() {
@@ -32,7 +32,7 @@ class Bootloader extends Phaser.Scene {
     }
     
     update() {
-        mouse(this.input, this.cubix_fondo);
+        pointer(this.input, this.cubix_fondo);
     }
 
 }

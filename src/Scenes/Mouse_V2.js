@@ -1,4 +1,4 @@
-/* M O U S E */
+/* M O U S E (o pointer)*/
 /*
 
 Este script realiza el movimiento de un gameObject (en este caso cubix_fondo) y bloquea o libera el uso del ratón.
@@ -6,7 +6,7 @@ Este script realiza el movimiento de un gameObject (en este caso cubix_fondo) y 
 Ayuda:  https://photonstorm.github.io/phaser3-docs/Phaser.Input.Events.html#event:POINTER_DOWN <-- Los demás eventos están justo debajo (^.^)
 */
 import { keymap } from '../modules/keys.js'
-import {blockMouse, releaseMouse, moveBlockMouse } from '../modules/controls.js'
+import {requestPointer as requestPointer, releasePointer as releasePointer, moveBlockPointer as moveBlockPointer } from '../modules/controls.js'
 
 class Bootloader extends Phaser.Scene {
     constructor() {
@@ -17,7 +17,7 @@ class Bootloader extends Phaser.Scene {
     }
     preload() {
         this.load.setPath('./assets/');
-        this.load.image(['cubix', 'cubix_fondo', 'drop']);
+        this.load.image(['cubix', 'cubix_fondo']);
     }
 
     create() {
@@ -26,13 +26,13 @@ class Bootloader extends Phaser.Scene {
 
         this.keys = this.input.keyboard.addKeys(keymap);
 
-        moveBlockMouse(this.input, this.cubix_fondo);
+        moveBlockPointer(this.input, this.cubix_fondo);
 
     }
     
     update() {
-        blockMouse(this.input);
-        releaseMouse(this.input, this.keys);
+        requestPointer(this.input);
+        releasePointer(this.input, this.keys);
     }
 
 }

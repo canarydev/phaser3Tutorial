@@ -48,7 +48,7 @@ export function setInvisible(keymap, player) {
 const EVENT = Phaser.Input.Events;
 //console.log("EVENT ", EVENT);
 
-export function mouse(input, object) {
+export function pointer(input, object) {
 
     input.on(EVENT.POINTER_DOWN, (event) => {
         console.log("Se ha clickado.");
@@ -101,19 +101,19 @@ export function blueOver(input) {
 
 }
 
-export function blockMouse(input) {
+export function requestPointer(input) {
     input.on(EVENT.POINTER_DOWN, () => {
         input.mouse.requestPointerLock(); //Bloquea el ratón
     });
 }
 
-export function releaseMouse(input, keymap) {
+export function releasePointer(input, keymap) {
     if (keymap.a.isDown) {
         input.mouse.releasePointerLock();
     }
 }
 
-export function moveBlockMouse(input, object) {
+export function moveBlockPointer(input, object) {
     input.on(EVENT.POINTER_MOVE, (pointer) => {
         if (input.mouse.locked) {
             try {
@@ -124,7 +124,8 @@ export function moveBlockMouse(input, object) {
         }
     });
 }
-
+//const EVENT = Phaser.Input.Events;
+//console.log(EVENT);
 export function drag(input, drop) {
     drop.input.dropZone = true;
     input.on(EVENT.DRAG_START, (pointer, obj, dragX, dragY) => {

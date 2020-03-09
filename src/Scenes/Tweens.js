@@ -29,7 +29,7 @@ class Bootloader extends Phaser.Scene {
                 duration: 9000
             },
             repeat: 0,
-            yoyo: false,
+            yoyo: true,
             //delay: 1000,
             //hold: 1000,
             //repeatDelay: 1000,
@@ -42,12 +42,6 @@ class Bootloader extends Phaser.Scene {
             onYoyo: () => {
                 console.log("Yoyolooooo.")
             },
-            /*
-            onComplete: () => {
-                console.log("Completado.")
-                this.cubix.setTint(0xFF0000);
-            },
-            */
             onComplete: (tween, obj, target) => {
                 target.setTint(0xFF0000);
                 console.log("Completado.")
