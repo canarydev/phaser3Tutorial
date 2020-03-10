@@ -25,7 +25,8 @@ class Bootloader extends Phaser.Scene {
     }
 
     create() {
-        this.texto = this.make.text(crearTexto('Hola Mundo!', 1));
+        this.texto = this.make.text(crearTexto('Todos muertos ;..;'));
+        this.texto = this.make.text(crearTexto('Todos muertos \n ;..;', 2, {color: '#ffffff'}));
     }
 
     update(time, delta) {

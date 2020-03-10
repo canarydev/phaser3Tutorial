@@ -9,12 +9,12 @@
 //import Bootloader from './Scenes/Pointer_V3.js';
 //import Bootloader from './Scenes/Animations_V1.js';
 //import Bootloader from './Scenes/Animations_V2.js';
-import Bootloader from './Scenes/Tweens.js';
+//import Bootloader from './Scenes/Tweens.js';
 //import Bootloader from './Scenes/Timelines_V1.js';
 //import Bootloader from './Scenes/Timelines_V2.js';
 //import Bootloader from './Scenes/StaticTexts_V1.js';
 //import Bootloader from './Scenes/StaticTexts_V2.js';
-//import Bootloader from './Scenes/StaticTexts_V3.js';
+import Bootloader from './Scenes/StaticTexts_V3.js';
 
 const config = {
     title: "prueba",

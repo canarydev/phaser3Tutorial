@@ -48,8 +48,8 @@ export function setInvisible(keymap, player) {
 const EVENT = Phaser.Input.Events;
 //console.log("EVENT ", EVENT);
 
+/* Mostrar los diferentes eventos que lanza el puntero */
 export function pointer(input, object) {
-
     input.on(EVENT.POINTER_DOWN, (event) => {
         console.log("Se ha clickado.");
     });
@@ -82,6 +82,8 @@ export function pointer(input, object) {
     });
 
 }
+
+/* Convierte en verde al gameObject sobre el que se hace click */
 export function greenClick(input) {
     input.on(EVENT.GAMEOBJECT_DOWN, (pointer, gameObject) => {
         gameObject.setTint(0x00ff00);
@@ -91,6 +93,7 @@ export function greenClick(input) {
     });
 }
 
+/* Convierte en azul al gameObject sobre el que se pasa por encima el puntero */
 export function blueOver(input) {
     input.on(EVENT.GAMEOBJECT_OVER, (pointer, gameObject) => {
         gameObject.setTint(0x0000ff);
@@ -101,18 +104,21 @@ export function blueOver(input) {
 
 }
 
+/* Bloquea el puntero */
 export function requestPointer(input) {
     input.on(EVENT.POINTER_DOWN, () => {
         input.mouse.requestPointerLock(); //Bloquea el ratón
     });
 }
 
+/* Libera el puntero */
 export function releasePointer(input, keymap) {
     if (keymap.a.isDown) {
         input.mouse.releasePointerLock();
     }
 }
 
+/* Permite mover un objeto */
 export function moveBlockPointer(input, object) {
     input.on(EVENT.POINTER_MOVE, (pointer) => {
         if (input.mouse.locked) {
@@ -124,8 +130,8 @@ export function moveBlockPointer(input, object) {
         }
     });
 }
-//const EVENT = Phaser.Input.Events;
-//console.log(EVENT);
+
+/* Permite arrastrar a un objeto. Se manejan múltiples eventos dentro */
 export function drag(input, drop) {
     drop.input.dropZone = true;
     input.on(EVENT.DRAG_START, (pointer, obj, dragX, dragY) => {
@@ -150,7 +156,6 @@ export function drag(input, drop) {
         obj.x = dropzone.x;
         obj.y = dropzone.y;
     });
-
     input.on(EVENT.DRAG_ENTER, (pointer, obj, dropzone) => {
         dropzone.setTint(0x08000);
     });
