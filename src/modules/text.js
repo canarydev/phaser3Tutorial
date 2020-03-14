@@ -19,18 +19,18 @@ function crearTextoConEstilos(texto, estilo, color, backgroundColor, fontSize, f
             text: texto || "Se te ha olvidado poner texto!",
             style: {
                 color: color || "#000000",
-                backgroundColor: backgroundColor || '#ffffff',
+                //backgroundColor: backgroundColor || '#ffffff',
                 fontSize: fontSize || 20,
             }
         },
         //Diálogos del personaje
         {
             x: 10,
-            y: 100,
+            y: 25,
             text: texto || "Se te ha olvidado poner texto!",
             style: {
                 fontFamily: 'IndieFlower',
-                color:  color || "#000000",
+                color:  color || "#00F000",
                 backgroundColor: backgroundColor || '#ffffff',
                 fontSize: fontSize || 30,
                 fontStyle: fontStyle ||'Bold Italic',
