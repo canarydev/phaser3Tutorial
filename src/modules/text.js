@@ -19,7 +19,6 @@ function crearTextoConEstilos(texto, estilo, color, backgroundColor, fontSize, f
             text: texto || "Se te ha olvidado poner texto!",
             style: {
                 color: color || "#000000",
-                //backgroundColor: backgroundColor || '#ffffff',
                 fontSize: fontSize || 20,
             }
         },
